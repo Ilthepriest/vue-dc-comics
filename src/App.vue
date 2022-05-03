@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <SiteHeader/>
+    <div class="container">
+      <SiteHeader/>
+    </div>
+      <SiteMain/>
+      <SiteInformation/>
+      <SiteFooter/>
   </div>
 </template>
 
 <script>
-import SiteHeader from '@/components/HeaderComponents.vue'
+import SiteHeader from '@/components/HeaderComponent.vue'
+import SiteMain from '@/components/MainComponent.vue'
+import SiteInformation from '@/components/InformationComponent.vue'
+import SiteFooter from '@/components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    SiteHeader
+    SiteHeader,
+    SiteMain,
+    SiteInformation,
+    SiteFooter
   }
 }
 </script>
@@ -18,6 +29,14 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 70%;
+  margin: 0 auto;
 }
 </style>
