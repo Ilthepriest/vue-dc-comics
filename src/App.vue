@@ -3,6 +3,7 @@
     <div class="container">
       <SiteHeader/>
     </div>
+      <SiteJumbotron />
       <SiteMain/>
       <SiteInformation/>
       <SiteFooter/>
@@ -11,6 +12,7 @@
 
 <script>
 import SiteHeader from '@/components/HeaderComponent.vue'
+import SiteJumbotron from '@/components/JumbotronComponent.vue'
 import SiteMain from '@/components/MainComponent.vue'
 import SiteInformation from '@/components/InformationComponent.vue'
 import SiteFooter from '@/components/FooterComponent.vue'
@@ -19,6 +21,7 @@ export default {
   name: 'App',
   components: {
     SiteHeader,
+    SiteJumbotron,
     SiteMain,
     SiteInformation,
     SiteFooter
