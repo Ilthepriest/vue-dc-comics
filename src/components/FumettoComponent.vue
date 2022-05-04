@@ -1,10 +1,10 @@
 <template>
     <div class="col">
           <div class="product">
-            <img :src="fumetto.src" alt=""/>
+            <img :src="thumb" alt=""/>
 
             <div class="titolo-fumetto">
-              <h6>{{ titolo }}</h6>
+              <h6>{{ series }}</h6>
               <!-- <span>{{fumetto.type}}</span> <span>{{fumetto.price}}</span> -->
             </div>
           </div>
@@ -15,11 +15,12 @@
 export default {
   name: 'SiteFumetto',
   props:{
-      fumetto: Object
+      thumb: String,
+      series: String
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss"  >
+  
 </style>

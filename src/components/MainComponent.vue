@@ -2,7 +2,7 @@
   <div class="content text-center">
     <div class="container">
       <div class="row">
-          <Fumetto :fumetto="fumetto.src" :titolo="fumetto.titolo" v-for="fumetto in fumetti" :key="fumetto.titolo" />
+          <Fumetto :thumb="fumetto.thumb" :series="fumetto.series" v-for="fumetto in fumetti" :key="fumetto.series" />
         <!-- <div class="col">
           <div class="product" v-for="(fumetto, index) in fumetti" :key="index">
             <img :src="fumetto.thumb" alt="" />
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Fumetto from '@/assets/components/FumettoComponent.vue';
+import Fumetto from '@/components/FumettoComponent.vue';
 export default {
   name: "SiteMain",
   components:{
@@ -119,7 +119,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .content {
   background-color: #1c1c1c;
   .row{
