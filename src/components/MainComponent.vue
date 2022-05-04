@@ -1,8 +1,10 @@
 <template>
-  <div class="content text-center">
+  <div class="content">
     <div class="container">
       <div class="row">
-          <Fumetto :thumb="fumetto.thumb" :series="fumetto.series" v-for="fumetto in fumetti" :key="fumetto.series" />
+        <div class="col">
+          <SiteFumetto :thumb="fumetto.thumb" :series="fumetto.series" v-for="fumetto in fumetti" :key="fumetto.series"/>
+        </div>  
         <!-- <div class="col">
           <div class="product" v-for="(fumetto, index) in fumetti" :key="index">
             <img :src="fumetto.thumb" alt="" />
@@ -20,11 +22,11 @@
 </template>
 
 <script>
-import Fumetto from '@/components/FumettoComponent.vue';
+import SiteFumetto from "@/components/FumettoComponent.vue";
 export default {
   name: "SiteMain",
-  components:{
-      Fumetto
+  components: {
+    SiteFumetto,
   },
   data() {
     return {
@@ -122,27 +124,15 @@ export default {
 <style lang="scss" >
 .content {
   background-color: #1c1c1c;
-  .row{
-      text-align: center;
-  }
-  .col {
+  .row {
+    text-align: center;
+  }.col{
     display: flex;
     flex-wrap: wrap;
     width: calc(100% / 6) * 6;
     justify-content: space-between;
     padding: 50px 0px;
     row-gap: 50px;
-    .product {
-      max-width: 192px;
-    }
-    h6 {
-      color: white;
-      text-align: start;
-    }
-    span {
-      color: white;
-      text-align: start;
-    }
   }
 }
 .loadMore {
@@ -152,9 +142,5 @@ export default {
   background-color: #0282f9;
   font-weight: 600;
   margin-bottom: 15px;
-}
-.text-center {
-  display: flex;
-  align-items: center;
 }
 </style>
